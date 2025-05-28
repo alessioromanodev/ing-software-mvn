@@ -1,0 +1,12 @@
+zip/entity/Ordine.class
+zip/entity/Utente.class
+zip/database/FumettoDAO.class
+zip/entity/RigaOrdine.class
+zip/boundary/App.class
+zip/entity/Newsletter.class
+zip/boundary/api/ApiServer.class
+zip/entity/Consegna.class
+zip/control/FumettoController.class
+zip/entity/Pagamento.class
+zip/entity/Fumetto.class
+zip/database/DBManager.class

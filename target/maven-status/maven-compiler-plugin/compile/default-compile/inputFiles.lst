@@ -1,0 +1,12 @@
+/home/alessiodev/repo/progetto-ing-mvn/fumetteriaZIP/src/main/java/zip/entity/Consegna.java
+/home/alessiodev/repo/progetto-ing-mvn/fumetteriaZIP/src/main/java/zip/entity/Ordine.java
+/home/alessiodev/repo/progetto-ing-mvn/fumetteriaZIP/src/main/java/zip/entity/Newsletter.java
+/home/alessiodev/repo/progetto-ing-mvn/fumetteriaZIP/src/main/java/zip/database/FumettoDAO.java
+/home/alessiodev/repo/progetto-ing-mvn/fumetteriaZIP/src/main/java/zip/boundary/api/ApiServer.java
+/home/alessiodev/repo/progetto-ing-mvn/fumetteriaZIP/src/main/java/zip/entity/RigaOrdine.java
+/home/alessiodev/repo/progetto-ing-mvn/fumetteriaZIP/src/main/java/zip/boundary/App.java
+/home/alessiodev/repo/progetto-ing-mvn/fumetteriaZIP/src/main/java/zip/control/FumettoController.java
+/home/alessiodev/repo/progetto-ing-mvn/fumetteriaZIP/src/main/java/zip/entity/Utente.java
+/home/alessiodev/repo/progetto-ing-mvn/fumetteriaZIP/src/main/java/zip/entity/Pagamento.java
+/home/alessiodev/repo/progetto-ing-mvn/fumetteriaZIP/src/main/java/zip/entity/Fumetto.java
+/home/alessiodev/repo/progetto-ing-mvn/fumetteriaZIP/src/main/java/zip/database/DBManager.java
