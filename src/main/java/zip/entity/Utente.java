@@ -1,5 +1,7 @@
 package zip.entity;
 
+import java.util.List;
+
 public class Utente {
     private Integer id;
     private String nome;
@@ -10,6 +12,7 @@ public class Utente {
     private String email;
     private String indirizzo;
     private Boolean registrato;
+    private List<Ordine> ordini;
 
     public Integer getId() { return id; }
     public void setId(Integer id) { this.id = id; }
@@ -21,7 +24,7 @@ public class Utente {
     public void setCognome(String cognome) { this.cognome = cognome; }
 
     public String getUsername() { return username; }
-    public void setUser(String username) { this.username = username; }
+    public void setUsername(String username) { this.username = username; }
 
     public String getRole() { return role; }
     public void setRole(String role) { this.role = role; }
@@ -37,4 +40,7 @@ public class Utente {
 
     public Boolean getRegistrato() { return registrato; }
     public void setRegistrato(Boolean registrato) { this.registrato = registrato; }
+
+    public List<Ordine> getOrdini() { return ordini; }
+    public void setOrdini(List<Ordine> ordini) { this.ordini = ordini; }
 }

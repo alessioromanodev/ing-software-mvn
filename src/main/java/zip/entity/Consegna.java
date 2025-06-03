@@ -7,7 +7,7 @@ public class Consegna {
     private LocalDateTime dataRichiesta;
     private LocalDateTime dataConsegna;
     private String stato;
-
+    private int idOrdine;
     public int getIdConsegna() { return idConsegna; }
     public void setIdConsegna(int idConsegna) { this.idConsegna = idConsegna; }
 
@@ -19,4 +19,7 @@ public class Consegna {
 
     public String getStato() { return stato; }
     public void setStato(String stato) { this.stato = stato; }
+
+    public int getIdOrdine() { return idOrdine; }
+    public void setIdOrdine(int idOrdine) { this.idOrdine = idOrdine; }
 }

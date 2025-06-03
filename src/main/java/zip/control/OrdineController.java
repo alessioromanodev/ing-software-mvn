@@ -1,20 +1,15 @@
 package zip.control;
 
-import zip.database.FumettoDAO;
-import zip.entity.Fumetto;
+import zip.database.OrdineDAO;
+import zip.entity.Ordine;
 
 import java.sql.SQLException;
 import java.util.List;
 
-public class FumettoController {
+public class OrdineController {
+    private final OrdineDAO dao = new OrdineDAO();
 
-    private final FumettoDAO dao;
-
-    public FumettoController() {
-        this.dao = new FumettoDAO();
-    }
-
-    public List<Fumetto> findAll() {
+    public List<Ordine> findAll() {
         try {
             return dao.findAll();
         } catch (SQLException e) {
@@ -23,28 +18,27 @@ public class FumettoController {
         }
     }
 
-    public Fumetto findById(int id) {
+    public Ordine findById(int id) {
         try {
-            return dao.findFumettoById(id);
+            return dao.findById(id);
         } catch (SQLException e) {
             e.printStackTrace();
             return null;
         }
     }
 
-    public boolean create(Fumetto f) {
+    public boolean create(Ordine ordine) {
         try {
-            dao.createFumetto(f);
-            return true;
+            return dao.create(ordine);
         } catch (SQLException e) {
             e.printStackTrace();
             return false;
         }
     }
 
-    public boolean update(Fumetto f) {
+    public boolean update(Ordine ordine) {
         try {
-            return dao.updateFumetto(f);
+            return dao.update(ordine);
         } catch (SQLException e) {
             e.printStackTrace();
             return false;
@@ -53,7 +47,7 @@ public class FumettoController {
 
     public boolean delete(int id) {
         try {
-            return dao.deleteFumettoById(id);
+            return dao.delete(id);
         } catch (SQLException e) {
             e.printStackTrace();
             return false;

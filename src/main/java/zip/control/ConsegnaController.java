@@ -1,20 +1,15 @@
 package zip.control;
 
-import zip.database.FumettoDAO;
-import zip.entity.Fumetto;
+import zip.database.ConsegnaDAO;
+import zip.entity.Consegna;
 
 import java.sql.SQLException;
 import java.util.List;
 
-public class FumettoController {
+public class ConsegnaController {
+    private final ConsegnaDAO dao = new ConsegnaDAO();
 
-    private final FumettoDAO dao;
-
-    public FumettoController() {
-        this.dao = new FumettoDAO();
-    }
-
-    public List<Fumetto> findAll() {
+    public List<Consegna> findAll() {
         try {
             return dao.findAll();
         } catch (SQLException e) {
@@ -23,28 +18,27 @@ public class FumettoController {
         }
     }
 
-    public Fumetto findById(int id) {
+    public Consegna findById(int id) {
         try {
-            return dao.findFumettoById(id);
+            return dao.findById(id);
         } catch (SQLException e) {
             e.printStackTrace();
             return null;
         }
     }
 
-    public boolean create(Fumetto f) {
+    public boolean create(Consegna c) {
         try {
-            dao.createFumetto(f);
-            return true;
+            return dao.create(c);
         } catch (SQLException e) {
             e.printStackTrace();
             return false;
         }
     }
 
-    public boolean update(Fumetto f) {
+    public boolean update(Consegna c) {
         try {
-            return dao.updateFumetto(f);
+            return dao.update(c);
         } catch (SQLException e) {
             e.printStackTrace();
             return false;
@@ -53,7 +47,7 @@ public class FumettoController {
 
     public boolean delete(int id) {
         try {
-            return dao.deleteFumettoById(id);
+            return dao.delete(id);
         } catch (SQLException e) {
             e.printStackTrace();
             return false;

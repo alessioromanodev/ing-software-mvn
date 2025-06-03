@@ -1,20 +1,15 @@
 package zip.control;
 
-import zip.database.FumettoDAO;
-import zip.entity.Fumetto;
+import zip.database.PagamentoDAO;
+import zip.entity.Pagamento;
 
 import java.sql.SQLException;
 import java.util.List;
 
-public class FumettoController {
+public class PagamentoController {
+    private final PagamentoDAO dao = new PagamentoDAO();
 
-    private final FumettoDAO dao;
-
-    public FumettoController() {
-        this.dao = new FumettoDAO();
-    }
-
-    public List<Fumetto> findAll() {
+    public List<Pagamento> findAll() {
         try {
             return dao.findAll();
         } catch (SQLException e) {
@@ -23,28 +18,36 @@ public class FumettoController {
         }
     }
 
-    public Fumetto findById(int id) {
+    public Pagamento findById(int id) {
         try {
-            return dao.findFumettoById(id);
+            return dao.findById(id);
         } catch (SQLException e) {
             e.printStackTrace();
             return null;
         }
     }
 
-    public boolean create(Fumetto f) {
+    public Pagamento findByOrdineId(int idOrdine) {
         try {
-            dao.createFumetto(f);
-            return true;
+            return dao.findByOrdineId(idOrdine);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    public boolean create(Pagamento p) {
+        try {
+            return dao.create(p);
         } catch (SQLException e) {
             e.printStackTrace();
             return false;
         }
     }
 
-    public boolean update(Fumetto f) {
+    public boolean update(Pagamento p) {
         try {
-            return dao.updateFumetto(f);
+            return dao.update(p);
         } catch (SQLException e) {
             e.printStackTrace();
             return false;
@@ -53,7 +56,7 @@ public class FumettoController {
 
     public boolean delete(int id) {
         try {
-            return dao.deleteFumettoById(id);
+            return dao.delete(id);
         } catch (SQLException e) {
             e.printStackTrace();
             return false;

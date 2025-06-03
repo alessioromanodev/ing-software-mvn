@@ -8,6 +8,7 @@ public class Pagamento {
     private double importo;
     private String metodo;
     private boolean scontoApplicato;
+    private int idOrdine;
 
     public int getIdPagamento() { return idPagamento; }
     public void setIdPagamento(int idPagamento) { this.idPagamento = idPagamento; }
@@ -23,4 +24,7 @@ public class Pagamento {
 
     public boolean isScontoApplicato() { return scontoApplicato; }
     public void setScontoApplicato(boolean scontoApplicato) { this.scontoApplicato = scontoApplicato; }
+
+    public int getIdOrdine() { return idOrdine; }
+    public void setIdOrdine(int idOrdine) { this.idOrdine = idOrdine; }
 }
